@@ -1,0 +1,233 @@
+body {
+	font-family: 'M PLUS Rounded 1c', 'メイリオ', Meiryo, sans-serif;
+	color: #333;
+	background-color: #f7f7f7;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+}
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ヘッダー */
+.header {
+	text-align: right;
+	padding: 10px 20px;
+	background-color: #222;
+}
+
+.header-link {
+	color: white;
+	text-decoration: none;
+	font-size: 0.9em;
+}
+
+.hero-section {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.maid-image {
+	max-width: 90%;
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cat-parade {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 15px;
+}
+
+.cat-parade img {
+	max-width: 100%;
+	height: auto;
+}
+
+.highlight-box {
+	background-color: #ffe0e6; /* 薄いピンク */
+	border: 2px solid #ff69b4;
+	padding: 20px;
+	margin: 30px 0;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 1.1em;
+	line-height: 1.8;
+}
+
+.highlight-box p {
+	margin: 5px 0;
+}
+
+.highlight-box strong {
+	color: #d6006f;
+}
+
+/* メディアセクション */
+.media-section {
+	padding: 20px 0;
+	text-align: center;
+}
+
+.section-title {
+	font-size: 1.8em;
+	color: #333;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #ccc;
+	padding-bottom: 5px;
+}
+
+/* ギャラリー（レスポンシブ対応） */
+.gallery {
+	display: flex;
+	justify-content: space-around;
+	gap: 15px;
+	margin-bottom: 30px;
+}
+
+.gallery-item {
+	flex: 1 1 30%; /* PC表示では3分割 */
+	text-align: center;
+}
+
+.gallery-item img {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item .caption {
+	font-size: 0.9em;
+	color: #777;
+	margin-top: 5px;
+}
+
+/* メインスクリーンショット */
+.main-screenshot {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.main-screenshot img {
+	width: 100%;
+	height: auto;
+	border: 5px solid #007bff; /* 青い枠 */
+	border-radius: 5px;
+}
+
+.main-caption {
+	background-color: #007bff;
+	color: white;
+	padding: 8px;
+	font-weight: bold;
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 0 0 5px 5px;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+/* テキストコンテンツ */
+.content-block {
+	margin-bottom: 30px;
+}
+
+.content-block h2 {
+	color: #ff69b4;
+	font-size: 1.5em;
+	border-left: 5px solid #ff69b4;
+	padding-left: 10px;
+	margin-bottom: 15px;
+}
+
+.content-block p {
+	margin-bottom: 15px;
+}
+
+hr {
+	border: none;
+	border-top: 1px dashed #ccc;
+	margin: 30px 0;
+}
+
+/* フッター */
+.footer {
+	text-align: center;
+	padding: 20px;
+	background-color: #333;
+	color: #ccc;
+	font-size: 0.8em;
+}
+
+/* 埋め込み動画 */
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9のアスペクト比 (9 / 16 * 100 = 56.25) */
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	margin-bottom: 100px;
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+/* ---------------------------------- */
+/* レスポンシブ対応（スマートフォン用） */
+/* ---------------------------------- */
+@media (max-width: 600px) {
+	
+	.container {
+		padding: 10px;
+	}
+
+	.main-title {
+		font-size: 2em;
+	}
+
+	.cat-parade {
+		gap: 5px;
+	}
+	
+	/* ギャラリーの画像を縦に並べる */
+	.gallery {
+		flex-direction: column; /* 要素を縦方向に並び替える */
+		gap: 20px;
+	}
+
+	.gallery-item {
+		flex: 1 1 100%; /* 幅を100%にして縦積み */
+	}
+
+	.main-caption {
+		/* スマホで文字が詰まらないように調整 */
+		font-size: 0.9em;
+		position: static;
+		transform: none;
+		border-radius: 0 0 5px 5px;
+	}
+	
+	.main-screenshot img {
+		border: none; /* スマホでは枠線を削除 */
+		border-radius: 0;
+	}
+}
