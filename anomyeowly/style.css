@@ -10,7 +10,7 @@ body {
 .container {
 	max-width: 900px;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 0 20px 20px 20px;
 	background-color: white;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
@@ -18,46 +18,34 @@ body {
 /* ヘッダー */
 .header {
 	text-align: right;
-	padding: 10px 20px;
-	background-color: #222;
 }
 
 .header-link {
+	background-color: #222;
 	color: white;
 	text-decoration: none;
 	font-size: 0.9em;
+	padding: 5px 40px;
 }
 
 .hero-section {
 	text-align: center;
-	padding: 20px 0;
+	padding: 3px 0 10px 0;
 }
 
 .maid-image {
 	max-width: 90%;
-	margin-top: 20px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.cat-parade {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
-	margin-top: 15px;
-}
-
-.cat-parade img {
-	max-width: 100%;
-	height: auto;
+	border: 1px solid #222;
 }
 
 .highlight-box {
 	background-color: #ffe0e6; /* 薄いピンク */
 	border: 2px solid #ff69b4;
 	padding: 20px;
-	margin: 30px 0;
+	margin: 10px 0;
 	border-radius: 10px;
 	text-align: center;
 	font-size: 1.1em;
@@ -70,6 +58,13 @@ body {
 
 .highlight-box strong {
 	color: #d6006f;
+}
+
+.highlight-box h2 {
+	color: #666;
+	font-size: 1.5em;
+	padding-left: 10px;
+	margin-bottom: 15px;
 }
 
 /* メディアセクション */
