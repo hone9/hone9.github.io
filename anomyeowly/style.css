@@ -67,6 +67,23 @@ body {
 	margin-bottom: 15px;
 }
 
+.highlight-box a {
+    color: #d6006f;
+    text-decoration: underline;
+    text-decoration-color: #ff69b4;
+    text-decoration-thickness: 1.5px;
+    transition: color 0.2s, text-decoration-color 0.2s; /* 滑らかな変化 */
+}
+
+.highlight-box a:hover {
+    color: #ff69b4;
+    text-decoration-color: #d6006f;
+}
+
+.highlight-box a:active {
+    color: #a30055; 
+}
+
 /* メディアセクション */
 .media-section {
 	padding: 20px 0;
